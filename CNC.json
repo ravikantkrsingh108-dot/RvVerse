@@ -1,0 +1,9 @@
+{
+  "name": "RvVerse Repo",
+  "iconUrl": "https://raw.githubusercontent.com/ravikantkrsingh108-dot/RvVerse/refs/heads/master/CNCVerse/icon.png",
+  "description": "Multi-Language Cloudstream Extensions",
+  "manifestVersion": 1,
+  "pluginLists": [
+    "https://raw.githubusercontent.com/ravikantkrsingh108-dot/RvVerse/builds/plugins.json"
+  ]
+}
