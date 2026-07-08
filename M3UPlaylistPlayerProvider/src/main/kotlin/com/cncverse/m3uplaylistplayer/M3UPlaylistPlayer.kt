@@ -395,25 +395,6 @@ class M3UPlaylistPlayer(
                     }
                 }
             )
-        } else if(loadData.url.contains("play.php?")) {
-            val userAgent = if (loadData.userAgent.isNotEmpty()) loadData.userAgent else "OTT Navigator/1.7.1.4 (Linux;Android 13; en; 1fin92n)"
-            val headers = mutableMapOf("User-Agent" to userAgent)
-            headers.putAll(loadData.headers)
-            if (loadData.cookie.isNotEmpty()) {
-                headers["Cookie"] = loadData.cookie
-            }
-            callback.invoke(
-                newExtractorLink(
-                    this.name,
-                    this.name,
-                    url = loadData.url,
-                    ExtractorLinkType.M3U8
-                ) {
-                    this.referer = ""
-                    this.quality = Qualities.Unknown.value
-                    this.headers = headers
-                }
-            )
         } else {
             val headers = mutableMapOf<String, String>()
             headers.putAll(loadData.headers)
